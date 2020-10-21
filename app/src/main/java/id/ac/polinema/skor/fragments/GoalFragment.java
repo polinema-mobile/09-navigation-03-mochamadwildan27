@@ -19,6 +19,7 @@ public class GoalFragment extends Fragment {
 
 	private String requestKey;
 	private GoalScorer goalScorer;
+	FragmentGoalBinding binding;
 
 	public GoalFragment() {
 		// Required empty public constructor

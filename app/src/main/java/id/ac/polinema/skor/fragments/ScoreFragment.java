@@ -49,6 +49,7 @@ public class ScoreFragment extends Fragment {
 		binding.setHomeGoalScorerList(homeGoalScorerList);
 		binding.setAwayGoalScorerList(awayGoalScorerList);
 		binding.setFragment(this);
+
 		getParentFragmentManager().setFragmentResultListener(HOME_REQUEST_KEY, this, new FragmentResultListener() {
 			@Override
 			public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
@@ -74,5 +75,21 @@ public class ScoreFragment extends Fragment {
 	public void onAddAwayClick(View view) {
 		ScoreFragmentDirections.GoalScorerAction action = ScoreFragmentDirections.goalScorerAction(AWAY_REQUEST_KEY);
 		Navigation.findNavController(view).navigate(action);
+	}
+
+	public String getDataHome(){
+		StringBuilder iki = new StringBuilder();
+		for (int i=0; i<homeGoalScorerList.size(); i++){
+			iki.append(homeGoalScorerList.get(i).toString());
+		}
+		return iki.toString();
+	}
+
+	public String getDataAway() {
+		StringBuilder iki = new StringBuilder();
+		for (int i=0; i<awayGoalScorerList.size(); i++){
+			iki.append(awayGoalScorerList.get(i).toString());
+		}
+		return iki.toString();
 	}
 }

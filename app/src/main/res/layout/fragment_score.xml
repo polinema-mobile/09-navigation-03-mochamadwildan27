@@ -103,6 +103,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginBottom="8dp"
+			android:text="@{fragment.dataHome}"
 			app:layout_constraintBottom_toTopOf="@+id/button_add_home"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent" />
@@ -112,6 +113,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginBottom="8dp"
+			android:text="@{fragment.dataAway}"
 			app:layout_constraintBottom_toTopOf="@+id/button_add_away"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent" />
